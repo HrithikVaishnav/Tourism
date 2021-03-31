@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Home Page of Tourism in India" />
+  <meta name="keywords" content="Tourism" />
+  <link rel="shortcut icon" type="image/ico" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./footer.css" />
+</head>
+
+<body>
+
+  <div>
+    <ul id="myNav" class="navbar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+    </ul>
+    <span style=" font-size:30px;cursor:pointer;" class="openbtn" onclick="openNav()">&#9776;</span>
+  </div>
+  <div class="container">
+    <img src="/assets/loading.gif" alt="">
+  </div>
+  <div class="everything">
+    <div class="heading">
+      <img id="star" src="/assets/star.png" alt="">
+      Tourism in India
+      <img id="star" src="/assets/star.png" alt="">
+    </div>
+    <div class="home-image">
+      <img src="/assets/Home/img1.jpg" onclick='bigImgView(this.src)' alt="Taj-Mahal">
+      <img src="/assets/Home/img4.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img3.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img2.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img5.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img6.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img7.jpg" onclick='bigImgView(this.src)' alt="Palace">
+      <img src="/assets/Home/img8.jpg" onclick='bigImgView(this.src)' alt="Palace">
+    </div>
+
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Gallery</h3>
+          <ul>
+            <li><a href="Gallery.html#Palace">Palaces</a></li>
+            <li><a href="Gallery.html#Temples">Temples</a></li>
+            <li><a href="Gallery.html#Wildlife">Wild-life</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Marketplace</h3>
+          <ul>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Best selling</a></li>
+            <li><a href="#">Latest</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Magazine</h3>
+          <ul>
+            <li><a href="#">Art skills</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Inspiration</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-section form">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter to get your weekly dose of news,updates,tips and special offers.</p>
+          <input type="email" placeholder="Enter your email address">
+          <button>Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; Hrithik Vaishnav
+      </div>
+    </footer>
+  </div>
+
+  <script>
+
+
+    // Preview function which takes a image url ( IMG tag's src sttribute ) as parameter.
+
+    let bigImgView = (imgSrc) => {
+
+      // Making elements
+      let divP = document.createElement('DIV');
+      let spanC = document.createElement('SPAN');
+      let imgC = document.createElement("IMG");
+
+      // Setting attributes
+      divP.setAttribute('class', 'bib-modal');
+      spanC.setAttribute('class', 'bib-close');
+      imgC.setAttribute('class', 'bib-modal-content');
+      imgC.setAttribute('src', imgSrc);
+
+      // Adding texts
+      spanC.innerHTML = '&times;';
+
+      // Handling events
+      spanC.onclick = function () {
+        this.parentElement.remove();
+      }
+
+      // Appending childs
+      divP.appendChild(spanC);
+      divP.appendChild(imgC);
+
+      // Appending to body
+      document.body.appendChild(divP);
+      divP.style.display = 'block';
+      console.log("Big image");
+    }
+
+
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>

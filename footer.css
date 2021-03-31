@@ -1,0 +1,93 @@
+.footer {
+  width: 80vw;
+  height: 30%;
+  background-color: #fff;
+  background: url(/assets/dotted.svg) repeat-x;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  /*position:fixed;*/
+  bottom:0;
+}
+.footer-content {
+  height: 300px;
+  display: flex;
+  padding: 40px 60px;
+  width: 100%;
+  border-bottom: 1px solid #84849d;
+}
+.footer-section {
+  width: 23%;
+}
+.footer-content .form {
+  width: 33%;
+}
+.footer-content .form p {
+  font-size: 14px;
+}
+.footer-section input {
+  border: 1px solid #84849d;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.footer-section button {
+  padding: 12px 78px;
+  color: white;
+  font-size: 15px;
+  background-color: #5d7cc5;
+  border: none;
+  border-radius: 5px;
+}
+.footer-section li {
+  list-style: none;
+  padding-bottom: 7px;
+}
+.footer-section li a {
+  text-decoration: none;
+  color: #000948;
+}
+.footer-section h3 {
+  color: #010837;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  color: #84849d;
+}
+
+@media screen and (max-width: 760px){
+  .footer{
+    width: 80vw;
+  }
+  .footer-section{
+    width: 20%;
+  }
+  .footer-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  .footer-section li {
+    font-size: 2.5vw;
+  }
+  .footer-section h3{
+    font-size: 2.8vw;
+  }
+  .footer-section input{
+    padding: 5px 5px;
+  }
+  .footer-section button{
+    padding: 5px 20px;
+  }
+}
